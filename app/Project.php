@@ -38,4 +38,8 @@ class Project extends Model
         return $this->belongsTo('App\Company', 'company_id', 'company_id');
     }
 
+    protected $fillable = [
+        'name'
+    ];
+
 }

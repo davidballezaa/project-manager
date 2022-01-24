@@ -17,4 +17,8 @@ class City extends Model
     {
         return $this->hasMany('App\Project');
     }
+
+    protected $fillable = [
+        'name'
+    ];
 }

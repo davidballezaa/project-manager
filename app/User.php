@@ -16,4 +16,8 @@ class User extends Model
     {
         return $this->hasMany('App\Project');
     }
+
+    protected $fillable = [
+        'name'
+    ];
 }
