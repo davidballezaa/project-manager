@@ -15,7 +15,7 @@ class Project extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\User', 'user_id', 'user_id');
     }
 
     /**
@@ -25,7 +25,7 @@ class Project extends Model
      */
     public function city()
     {
-        return $this->belongsTo('App\City');
+        return $this->belongsTo('App\City', 'city_id', 'city_id');
     }
 
     /**
@@ -35,7 +35,7 @@ class Project extends Model
      */
     public function company()
     {
-        return $this->belongsTo('App\Company');
+        return $this->belongsTo('App\Company', 'company_id', 'company_id');
     }
 
 }
