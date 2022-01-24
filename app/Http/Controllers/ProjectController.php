@@ -60,7 +60,9 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('edit', [
+            'project' => $project
+        ]);
     }
 
     /**
@@ -83,6 +85,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return back();
     }
 }
