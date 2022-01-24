@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/projects', 'ProjectController@index');
+Route::get('/', 'ProjectController@index')->name('projects.index');
+Route::resource('projects', 'ProjectController')->except(['show', 'index']);
